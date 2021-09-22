@@ -1,7 +1,7 @@
 function thing(num:number): number {
     let n:number = 0
     for (let i = 0; i < num.toString().length; i++){
-        n = n + num.toString().split('').map((num) => {return Number(num)})[i]**2
+        n += n num.toString().split('').map((num) => {return Number(num)})[i]**2
     }
     return n
 }

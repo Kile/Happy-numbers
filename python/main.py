@@ -2,7 +2,7 @@ def thing(number:int):
     """Returns a number based on the happy number thing"""
     n = 0
     for i in range(len(str(number))):
-        n = n+[x for x in map(int, str(number))][i]**2 
+        n += [x for x in map(int, str(number))][i]**2 
     return n
 
 def is_happy(number:int):
