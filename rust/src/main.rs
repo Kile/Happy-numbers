@@ -1,6 +1,6 @@
 fn main() {
-    println!("Is 19 a happy number? {:?}", is_happy(&19)); // Expected output: true
-    println!("Is 5 a happy number? {:?}", is_happy(&5)); //Expected output: false
+    println!("Is 19 a happy number? {:}", match is_happy(&19){true => "Yes", false => "No"}); // Expected output: Yes
+    println!("Is 5 a happy number? {:}", match is_happy(&5){true => "Yes", false => "No"}); //Expected output: No
 }
 
 fn thing(number: &u32) -> u32 {

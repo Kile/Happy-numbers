@@ -1,11 +1,11 @@
-def thing(number:int):
+def thing(number:int) -> int:
     """Returns a number based on the happy number thing"""
     n = 0
-    for i in range(len(str(number))):
-        n = n+[x for x in map(int, str(number))][i]**2 
+    for letter in [l for l in str(number)]:
+        n += int(letter)**2 
     return n
 
-def is_happy(number:int):
+def is_happy(number:int) -> bool:
     """Returns a bool that states wether a number is happy or not"""
     results = []
     result = thing(number)
@@ -16,3 +16,9 @@ def is_happy(number:int):
         results.append(result)
 
     return (result == 1)
+
+
+# Tests
+print("Is 19 a happy number? ", "Yes" if is_happy(19) else "No") #Expected: Yes
+
+print("Is 5 a happy number? ", "Yes" if is_happy(5) else "No") # Expected: No
